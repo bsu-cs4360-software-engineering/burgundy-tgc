@@ -1,6 +1,5 @@
 {
-    "cards": 
-    [
+    "cards": [
         {
             "name": "Barbarian",
             "health_points": 90,
@@ -65,11 +64,10 @@
             "name": "Wizard",
             "health_points": 50,
             "defense": 10,
-            "attack": 55
+            "attack": 75
         }
     ],
-    "abilities": 
-    [
+    "abilities": [
         {
             "name": "Rage",
             "attack_up": 20,
