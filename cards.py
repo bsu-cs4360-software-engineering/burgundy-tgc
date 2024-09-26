@@ -1,61 +1,37 @@
-import json
+class card:
+    def __init__(self, hp, attack, damage, defense, name):
+        self.health_points = hp
+        self.attack = attack
+        self.damage = damage
+        self.defense = defense
+        self.name = name
 
-class cards:
-
-    def __init__(self):
-        with open('info.json', 'r') as f:
-            self.data = json.load(f)
-
-    def GetHealth(self, name):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                return card['health_points']
-        return None
-
-    def GetDefense(self, name):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                return card['defense']
-        return None
+    # Health Point
+    def get_hp(self):
+        return self.health_points
+    def update_hp(self, new_hp):
+        self.health_points = new_hp
+        return True
     
-    def GetAttack(self, name):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                return card['attack']
-        return None
+    # Attack
+    def get_attack(self):
+        return self.attack
+    def update_attack(self, new_attack):
+        self.attack = new_attack
+        return True
     
-    def GetName(self, name):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                return card['name']
-        return None
+    # Damage
+    def take_damage(self, inflected):
+        self.health_points -= inflected
+        return True
     
-    # Update Functions
-
-    def UpdateHealth(self, name, new_attack):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                card['health'] = new_attack
-                self._save_to_file()
-                return True
-        return False
-        
-    def UpdateDefense(self, name, new_attack):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                card['defense'] = new_attack
-                self._save_to_file()
-                return True
-        return False
-
-    def UpdateAttack(self, name, new_attack):
-        for card in self.data['cards']:
-            if card['name'].lower() == name.lower():
-                card['attack'] = new_attack
-                self._save_to_file()
-                return True
-        return False
-
-    def _save_to_file(self):
-        with open('info.json', 'w') as f:
-            json.dump(self.data, f, indent=4)
+    # Defesne
+    def get_defense(self):
+        return self.defense
+    def update_defesne(self, new_defense):
+        self.defense = new_defense
+        return True
+    
+    #Name
+    def get_name(self):
+        return self.name
