@@ -1,8 +1,7 @@
-class card:
-    def __init__(self, hp, attack, damage, defense, name):
+class Card:
+    def __init__(self, hp, attack, defense, name):
         self.health_points = hp
         self.attack = attack
-        self.damage = damage
         self.defense = defense
         self.name = name
 
