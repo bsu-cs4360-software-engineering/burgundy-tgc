@@ -1,0 +1,79 @@
+{
+    "cards": [
+        {
+            "name": "Barbarian",
+            "health_points": 90,
+            "defense": 15,
+            "attack": 20
+        },
+        {
+            "name": "Monk",
+            "health_points": 50,
+            "defense": 15,
+            "attack": 30
+        },
+        {
+            "name": "Cleric",
+            "health_points": 60,
+            "defense": 25,
+            "attack": 30
+        },
+        {
+            "name": "Druid",
+            "health_points": 70,
+            "defense": 20,
+            "attack": 25
+        },
+        {
+            "name": "Fighter",
+            "health_points": 80,
+            "defense": 25,
+            "attack": 20
+        },
+        {
+            "name": "Paladin",
+            "health_points": 60,
+            "defense": 30,
+            "attack": 20
+        },
+        {
+            "name": "Ranger",
+            "health_points": 40,
+            "defense": 10,
+            "attack": 50
+        },
+        {
+            "name": "Rogue",
+            "health_points": 60,
+            "defense": 20,
+            "attack": 30
+        },
+        {
+            "name": "Sorcerer",
+            "health_points": 40,
+            "defense": 5,
+            "attack": 50
+        },
+        {
+            "name": "Warlock",
+            "health_points": 50,
+            "defense": 15,
+            "attack": 35
+        },
+        {
+            "name": "Wizard",
+            "health_points": 50,
+            "defense": 10,
+            "attack": 75
+        }
+    ],
+    "abilities": [
+        {
+            "name": "Rage",
+            "attack_up": 20,
+            "defense_up": 0,
+            "health_up": 10,
+            "needed_mana": 20
+        }
+    ]
+}
