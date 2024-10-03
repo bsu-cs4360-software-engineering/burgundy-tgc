@@ -1,11 +1,12 @@
 from Hand import Hand
+from DBController import DBController
 from Field import Field
 from Deck import Deck
 
 def main():
     field = Field()  # create a field for playing cards
     hand = Hand() # create a hand to hold drawn cards
-    deck = Deck()
+    deck = Deck(DBController("info.json"))
     deck.populate()
     deck.shuffle()
 
