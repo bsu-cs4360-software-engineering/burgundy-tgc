@@ -4,14 +4,14 @@ from Field import Field
 from Card import Card
 
 class TestHand(unittest.TestCase):
-    def generate_test_hand(self):
+    def setUp(self):
         # generates hand with 5 cards (max is 4)
         self.hand = Hand(max_cards=4)
-        self.card1 = Card(name="Card1", attack=10)
-        self.card2 = Card(name="Card2", attack=20)
-        self.card3 = Card(name="Card3", attack=30)
-        self.card4 = Card(name="Card4", attack=40)
-        self.card5 = Card(name="Card5", attack=50)
+        self.card1 = Card(name="Card1", attack=10,hp=10,defense=5)
+        self.card2 = Card(name="Card2", attack=20,hp=10,defense=5)
+        self.card3 = Card(name="Card3", attack=30,hp=10,defense=5)
+        self.card4 = Card(name="Card4", attack=40,hp=10,defense=5)
+        self.card5 = Card(name="Card5", attack=50,hp=10,defense=5)
 
     def test_add_card(self):
         # tests adding a card to the hand
@@ -45,10 +45,10 @@ class TestHand(unittest.TestCase):
         self.hand.show_hand()
 
 class TestField(unittest.TestCase):
-    def setUpField(self):
+    def setUp(self):
         # tests setting up the field (boss health)
         self.field = Field()
-        self.card = Card(name="AttackCard", attack=20)
+        self.card = Card(name="AttackCard", attack=20,hp=10,defense=10)
 
     def test_apply_card(self):
         self.field.apply_card(self.card)
