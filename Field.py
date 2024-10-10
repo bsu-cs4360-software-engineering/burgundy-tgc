@@ -13,3 +13,6 @@ class Field:
 
             if self.boss_health <= 0:
                 print("The boss has been defeated.")
+
+    def get_boss_health(self):
+        return self.boss_health

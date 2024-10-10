@@ -43,4 +43,12 @@ class Hand:
                 print(f"{i}: {card.name}")
         else:
             print("Hand is empty.")
-
+    
+    def get_hand(self):
+        return self.cards_in_hand
+    
+    def get_card_name_by_index(self, index):
+        if 0 <= index < len(self.cards_in_hand):
+           return self.cards_in_hand[index].get_name()
+        else:
+            return "No Card"
